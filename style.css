@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+
+/* Class referente a qualquer parte do codigo, exemplo varias tabelas */
+/* Agora o id conforme o item abaixo é referenciado especialmente pra ele */
+
+body{
+    background: #eff1f4ff;
+    overflow-x: hidden;
+}
+
+
+/* view port views */
+#page-content-wrapper{
+    min-width: 100vw;
+}
+
+/* Se eu estiver em uma tela grande aplique esta regra */ 
+@media(min-width: 768px){
+    #page-content-wrapper{
+        min-width: 0;
+        width: 100%;
+    }
+}
+
+/* viewport height */
+/* flex voce usa rem 1 rem equivale a 16px */
+#sidebar-wrapper{
+    min-height: 100vh;
+    /* margin-left: -18rem; */
+    background-color: #3e4856ff;
+}
+
+
+#sidebar-wrapper .sidebar-heading{
+    padding:  0.875rem 1.25rem;
+    background-color: #262d37ff;
+    color: #fff;
+    height: 64px;
+    font-size: 17px;
+    font-family: 'Nunito', sans-serif;
+}
+
+#sidebar-wrapper .list-group{
+    width: 18rem;
+}
+
+#sidebar-wrapper .list-group-item{
+    background-color: #3e4856ff;
+    color:#fff;
+    border:none;
+    font-family: 'Nunito', sans-serif;
+    padding: 10%;
+    padding-left: 15%;
+}
+
+#sidebar-wrapper .list-group-item:hover{
+    background-color: #262e39f0;
+    color:#fff;
+
+}
+
+
+
+#navbar-site-title{
+    font-family: 'Nunito', sans-serif;
+    font-size: 18px;
+    padding-left: 1.2%;
+}
+
+.son-form-field{
+    border-radius: 9px;
+    border-width: 1px;
+    border-color: #bacad6ff;
+    box-shadow: 0px 1px 2px rgba(164,164,164,0.2);
+    color: #000;
+    font-family: 'Nunito', sans-serif;
+    font-size: 16px;
+}
+
+.son-form-field::placeholder{
+    color: #c4c8ccff;
+    font-family: 'Nunito', sans-serif;
+    font-size: 16px;
+}
+
+#navbar-search-form{
+    width: 350px;
+}
+
+#navbar-search-field{
+    width: 100%;
+}
+
+#navbar-profile img{
+    border-radius: 50%;
+    width: 12%;
+}
+
+#navbar-profile span{
+    padding-left: 4%;
+    color: #262d37ff;
+    font-family: 'Nunito', sans-serif;
+}
+
+#son-navbar{
+    background-color: #fff;
+    box-shadow: 8px 2px 6px rgba(164,164, 164, 0.3);
+}
