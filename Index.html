@@ -8,29 +8,33 @@
 
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
-</head>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous"/></head>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/solid.css" integrity="sha384-Tv5i09RULyHKMwX0E8wJUqSOaXlyu3SQxORObAI08iUwIalMmN5L6AvlPX2LMoSE" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/fontawesome.css" integrity="sha384-jLKHWM3JRmfMU0A5x5AkjWkw/EYfGUAGagvnfryNV3F9VqM98XiIH7VBGVoxVSc7" crossorigin="anonymous"/>
+
 <body>
 
     <div class="d-flex" id="wrapper">
 
         <!-- sidebar -->
         <div id="sidebar-wrapper">
-            <div class="sidebar-heading">
+            <div class="sidebar-heading"><img src="foguete.png">
                 <span> Painel da SON</span>
             </div>
                 <div class="list-group list-group-flush border-right">
-                    <a href="#" class="list-group-item list-group-item-action">Inicio</a>
-                    <a href="#" class="list-group-item list-group-item-action">Funcionarios</a>
-                    <a href="#" class="list-group-item list-group-item-action">Produtos</a>
-                    <a href="#" class="list-group-item list-group-item-action">Categorias</a>
-                    <a href="#" class="list-group-item list-group-item-action">Forncededores</a>
-                    <a href="#" class="list-group-item list-group-item-action">Relatorios</a>
+                    <a href="#" class="list-group-item list-group-item-action"><i class="fas fa-home"></i>Inicio</a>
+                    <a href="#" class="list-group-item list-group-item-action"><i class="fas fa-users"></i>Funcionários</a>
+                    <a href="#" class="list-group-item list-group-item-action"><i class="fas fa-box-open"></i>Produtos</a>
+                    <a href="#" class="list-group-item list-group-item-action"><i class="fas fa-sitemap"></i>Categorias</a>
+                    <a href="#" class="list-group-item list-group-item-action"><i class="fas fa-people-carry"></i>Fornecedores</a>
+                    <a href="#" class="list-group-item list-group-item-action"><i class="far fa-chart-bar"></i>Relatórios</a>
                 </div>
 
         </div>
         <!-- Conteudo -->
         <div id="page-content-wrapper">
                 <nav class="navbar navbar-expand-lg navbar-ligth border" id="son-navbar">
+                    <span id="menu-toggle" class="mx-auto"><img src="foguete.png" class="mx-auto d-block"></span>
                     <a class="navbar-brand" href="#" id="navbar-site-title"> Painel</a>
                     
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#son-navbar-collapse"
@@ -51,14 +55,130 @@
                         </div>
                     </div>
                 </nav>
-        </div>
+                <div id="content" class="container">
+                    <div class="table-title">
+                        <h3>Usuarios</h3>
+                        <input type="text" class="form-control form-field son-form-field" placeholder="Pesquisar">
+                    </div>
 
+                    <table class="table bg-white">
+                        <thead>
+                            <tr>
+                                <th class="table-col-title">#</th>
+                                <th class="table-col-title">Nome</th>
+                                <th class="table-col-title">SOBRENOME</th>
+                                <th class="table-col-title">USUARIO</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>1</th>
+                                <td>Erik</td>
+                                <td>Tonin</td>
+                                <td>erik@tonin</td>
+                            </tr>
+                            <tr>
+                                <th>2</th>
+                                <td>Erik</td>
+                                <td>Tonin</td>
+                                <td>erik@tonin</td>
+                            </tr>
+                            <tr>
+                                <th>3</th>
+                                <td>Erik</td>
+                                <td>Tonin</td>
+                                <td>erik@tonin</td>
+                            </tr>
+                            <tr>
+                                <th>4</th>
+                                <td>Erik</td>
+                                <td>Tonin</td>
+                                <td>erik@tonin</td>
+                            </tr>
+                            <tr>
+                                <th>5</th>
+                                <td>Erik</td>
+                                <td>Tonin</td>
+                                <td>erik@tonin</td>
+                            </tr>
+                        </tbody>
+
+                    </table>
+                    
+                    <h3 id="main-page-form-title" class="son-main-text-3">Novo artigo</h3>
+                    <div class="son-form">
+                        <form class="card son-form">
+                            <div class="card-body son-form-body">
+                                <div class="form-group">
+                                    <label>Autor</label>
+                                    <input class="form field son-form-field form-control" id="user-field" placeholder="Autor">
+                                    <hr>
+                                </div>
+                                <div class="form-group">
+                                    <label>Titulo</label>
+                                    <input class="form field son-form-field form-control" id="title-field" placeholder="Titulo">
+                                    <hr>
+                                </div>
+                                <div class="form-group">
+                                    <label>Conteudo</label>
+                                    <textarea placeholder="Digite um texto" class="form-field son-form-field form-control" id="body-field"></textarea>
+                                    <hr>
+                                </div>
+                                <div class="form-group">
+                                    <label>Conteudo</label>
+                                    <input type="date" class="form-field son-form-field form-control">
+                                </div>
+                            </div>
+                            <div class="confirm-btns card-footer">
+                                <button class="btn btn-primary"> Criar</button>
+                                <button class="btn btn-primary"> Publicar</button>
+                            </div>
+                        </form>
+                        <h3 id="vendas-h3">
+                            Vendas
+                        </h3>
+
+                        <div class="card">
+                            <div class="card-body">
+                                <canvas id="relatorio">
+                                </canvas>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+        </div>
     </div>
 
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
 
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script>
+        $("#menu-toggle").click(function(event) {
+            event.preventDefault();
+            $("#wrapper").toggleClass("toggled");
+        });
+    </script>
+    <script defer src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" integrity="sha384-rOA1PnstxnOBLzCLMcre8ybwbTmemjzdNlILg8O7z1lUkLXozs4DHonlDtnE7fpc" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        var contexto = document.getElementById("relatorio").getContext('2d')
+        var grafico = new Chart(contexto, {
+            type: 'line',
+            data: {
+                labels: ['Janeiro', 'Fevereiro', 'Marco', 'Abril', 'Maio', 'Junho', 'Julho'],
+                datasets: [{
+                    label: 'Vendas do ano',
+                    backgroudColor: "#5898d9ff",
+                    borderColor: "5898d9ff",
+                    data:[10,5,7,18]
+                }]
+            }
+        })
+    </script>
 </body>
 </html>

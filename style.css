@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
 
-
 /* Class referente a qualquer parte do codigo, exemplo varias tabelas */
 /* Agora o id conforme o item abaixo é referenciado especialmente pra ele */
 
@@ -9,28 +8,18 @@ body{
     overflow-x: hidden;
 }
 
-
-/* view port views */
-#page-content-wrapper{
-    min-width: 100vw;
-}
-
-/* Se eu estiver em uma tela grande aplique esta regra */ 
-@media(min-width: 768px){
-    #page-content-wrapper{
-        min-width: 0;
-        width: 100%;
-    }
-}
-
 /* viewport height */
 /* flex voce usa rem 1 rem equivale a 16px */
 #sidebar-wrapper{
     min-height: 100vh;
-    /* margin-left: -18rem; */
+    margin-left: -18rem;
+    -webkit-transition: margin .25s ease-out;
+    -moz-transition: margin .25s ease-out;
+    -o-transition: margin .25s ease-out;
+    background-color: #3e4856ff;
+    transition: margin .25s ease-out;
     background-color: #3e4856ff;
 }
-
 
 #sidebar-wrapper .sidebar-heading{
     padding:  0.875rem 1.25rem;
@@ -39,6 +28,12 @@ body{
     height: 64px;
     font-size: 17px;
     font-family: 'Nunito', sans-serif;
+}
+
+#sidebar-wrapper .sidebar-heading img{
+    width: 30px;
+    padding-bottom: 3%;
+    padding-right: 3%;
 }
 
 #sidebar-wrapper .list-group{
@@ -57,10 +52,37 @@ body{
 #sidebar-wrapper .list-group-item:hover{
     background-color: #262e39f0;
     color:#fff;
-
 }
 
+#sidebar-wrapper .list-group-item i{
+    padding-right: 5.5%;
+    font-size: 18px;
+}
 
+/* view port views */
+#page-content-wrapper{
+    min-width: 100vw;
+}
+
+#wrapper.toggled #siderbar-wrapper{
+    margin-left: 0;
+}
+
+/* Se eu estiver em uma tela grande aplique esta regra */ 
+@media(min-width: 768px){
+    #page-content-wrapper{
+        min-width: 0;
+        width: 100%;
+    }
+
+    #sidebar-wrapper{
+        margin-left: 0;
+    }
+
+    #wrapper.toggled #sidebar-wrapper{
+        margin-left: -18rem;
+    }
+}
 
 #navbar-site-title{
     font-family: 'Nunito', sans-serif;
@@ -106,4 +128,83 @@ body{
 #son-navbar{
     background-color: #fff;
     box-shadow: 8px 2px 6px rgba(164,164, 164, 0.3);
+
+}
+
+#menu-toggle{
+    background-color: #262637ff;
+    color: #fff;
+}
+
+#menu-toggle img{
+    width: 35px;
+}
+
+#content{
+    margin-top: 40px;
+}
+
+.son-main-text-3{
+    font-family: 'Nunito', sans-serif;
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+.son-form-body{
+    padding: 2.5%;
+    box-shadow: 8px 2px 6px rgba(164,164, 164, 0.3);
+}
+
+.son-form{
+    border-radius: 15px;
+}
+
+
+.form-group label{
+    font-size: 16px;
+    color: #a3a8ae;
+}
+
+.confirm-btns button{
+    font-family: 'Nunito', sans-serif;
+    font-weight: bold;
+    padding-left: 2%;
+    padding-right: 2%;
+    border-radius: 9px;
+    background-color: #5898d9ff
+}
+
+.table thead{
+    background-color: #f7f6fb;
+}
+
+.table-col-title{
+    font-family: 'Nunito', sans-serif;
+    font-size: 13px;
+    color:#78797d
+}
+
+.table tbody{
+    font-family: 'Nunito', sans-serif;
+    font-size: 16px;
+    color:#78797d
+}
+
+.table{
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0px 4px 12px rgba(164,164, 164, 0.3);
+}
+
+.table-title{
+    margin-top: 5vh;
+    margin-bottom: 2vh;
+}
+
+.table-title input{
+    width: 40%;
+}
+
+#vendas-h3{
+    margin-top: 2vh;
 }
